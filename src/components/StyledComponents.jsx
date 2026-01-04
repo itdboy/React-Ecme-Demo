@@ -38,7 +38,7 @@ export const Button = styled.button`
     if (props.$variant === 'error') return props.theme.colors.error;
     return props.theme.colors.primary;
   }};
-  color: ${props => props.$variant === 'secondary' ? props.theme.colors.background : '#ffffff'};
+  color: ${props => props.$variant === 'secondary' ? props.theme.colors.background : props.theme.colors.text.contrast};
   border: none;
   border-radius: ${props => props.theme.borderRadius.small};
   font-size: ${props => props.theme.typography.fontSize.medium};
@@ -113,7 +113,7 @@ export const Badge = styled.span`
     if (props.$variant === 'info') return props.theme.colors.info;
     return props.theme.colors.primary;
   }};
-  color: #ffffff;
+  color: ${props => props.theme.colors.text.contrast};
   border-radius: ${props => props.theme.borderRadius.large};
   font-size: ${props => props.theme.typography.fontSize.small};
   font-weight: ${props => props.theme.typography.fontWeight.medium};
